@@ -1,0 +1,24 @@
+{
+  "name": "js-docker",
+  "version": "1.0.0",
+  "description": "A simple Docker-like container system built with JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "node api-server.js",
+    "ui": "cd web-ui && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run ui\"",
+    "build-ui": "cd web-ui && npm run build",
+    "test": "node test.js"
+  },
+  "keywords": ["docker", "container", "javascript"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "socket.io": "^4.7.0",
+    "concurrently": "^8.2.0"
+  }
+}
